@@ -1,8 +1,7 @@
 name: wordpress_suite
 description: A dart package to interact with the WordPress Suite, like WooCommerce, LearnPress and etc
 version: 0.1.0
-author:
-homepage:
+homepage: https://github.com/maplerichie/wordpress_suite
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -12,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   dio: ^3.0.9
+  meta: ^1.1.8
 
 dev_dependencies:
   flutter_test:
@@ -26,13 +26,7 @@ flutter:
   # The 'pluginClass' and Android 'package' identifiers should not ordinarily
   # be modified. They are used by the tooling to maintain consistency when
   # adding or updating assets for this project.
-  plugin:
-    platforms:
-      android:
-        package: io.noveltylab.wordpress_suite
-        pluginClass: WordpressSuitePlugin
-      ios:
-        pluginClass: WordpressSuitePlugin
+
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
