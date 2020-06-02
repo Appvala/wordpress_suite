@@ -1,8 +1,35 @@
 # WordPress Suite
 
-A dart package to interact with the WordPress Suite, like WooCommerce, LearnPress and etc. Welcome WordPress plugin authors, maintainers, fans to contribute!
+A Dart and Flutter package to interact with the WordPress Suite, like WooCommerce, LearnPress and etc. Welcome WordPress plugin authors, maintainers, fans to contribute!
 
 ## Examples
+
+Use with care, some plugins may deprecated with concern!
+
+Wordpress API open access as default, http://yourwordpress.com/wp-json
+
+### WordPress Authentication Method
+
+Application Passwords - Last updated: Jan 2020
+
+https://wordpress.org/plugins/application-passwords/
+
+Basic Authentication - Last updated: Dec 2017
+
+https://github.com/WP-API/Basic-Auth
+
+JSON Web Tokens - Last updated: 2019
+
+https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/
+
+Advanced Access Manager - Last updated May 2020
+
+https://wordpress.org/plugins/advanced-access-manager/
+
+```
+[username] and [password] required for:
+ApplicationPasswords, BasicAuthentication, 
+```
 
 ### WordPress GET request
 ```dart
@@ -12,8 +39,8 @@ WordPress wp = WordPress(
     ),
     versionPath: "/wp/v2",
     method: AuthMethod.BasicAuthentication,
-    username: 'your_username',
-    password: 'your_password',
+    username: 'username',
+    password: 'password',
   );
   var users = await wp.get('/users');
   print(users);
